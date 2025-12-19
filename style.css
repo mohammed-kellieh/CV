@@ -1,0 +1,487 @@
+:root{
+  --bg:#0b0f1a;
+  --card:rgba(255,255,255,.08);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.70);
+  --line:rgba(255,255,255,.14);
+  --shadow: 0 12px 34px rgba(0,0,0,.35);
+  --radius:18px;
+  --accent:#7c5cff;
+  --accent2:#23d5ab;
+  --max: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--text);
+  background:
+    radial-gradient(900px 600px at 15% 10%, rgba(124,92,255,.35), transparent 55%),
+    radial-gradient(900px 600px at 85% 20%, rgba(35,213,171,.22), transparent 55%),
+    linear-gradient(180deg, var(--bg), #070912 55%, #050611);
+}
+
+a{color:inherit}
+a:hover{opacity:.9}
+
+.page{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:26px 16px 60px;
+  display:grid;
+  grid-template-columns: 340px 1fr;
+  gap:16px;
+}
+
+@media (max-width: 980px){
+  .page{grid-template-columns:1fr}
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.sidebar{
+  padding:14px;
+  position:sticky;
+  top:16px;
+  height: fit-content;
+}
+
+@media (max-width: 980px){
+  .sidebar{position:static}
+}
+
+/* ===== LinkedIn-style profile picture ===== */
+
+.avatar-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 12px 0 20px;
+}
+
+.avatar{
+  width:96px;              /* LinkedIn-like size */
+  height:96px;
+  min-width:96px;
+  min-height:96px;
+
+  border-radius:50%;
+  object-fit:cover;        /* crops the image, never stretches */
+  display:block;
+
+  border:2px solid rgba(255,255,255,.35);
+  background:#111;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.35),
+    0 0 0 5px rgba(124,92,255,.18);
+}
+
+/* Mobile: slightly smaller */
+@media (max-width: 980px){
+  .avatar{
+    width:84px;
+    height:84px;
+    min-width:84px;
+    min-height:84px;
+  }
+}
+
+
+
+
+
+.block{margin-top:14px; padding:10px 10px 6px}
+.block h3{
+  margin:0 0 10px;
+  font-size:14px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:10px;
+}
+.list li{
+  display:grid;
+  gap:4px;
+  padding:10px 10px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(0,0,0,.10);
+}
+.k{font-size:12px; color:var(--muted)}
+.v{font-size:14px; line-height:1.35}
+
+.mini{
+  margin-top:10px;
+  padding:10px 10px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(0,0,0,.10);
+}
+.mini-title{font-weight:700; font-size:14px}
+.mini-sub{color:var(--muted); font-size:13px; line-height:1.35; margin-top:4px}
+.mini-meta{color:var(--muted); font-size:12px; margin-top:8px}
+
+.bullets{
+  margin:8px 0 0;
+  padding-left:18px;
+  color:var(--muted);
+  line-height:1.55;
+}
+.bullets li{margin:6px 0}
+
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  
+}
+
+.hero{padding:20px}
+.hero-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom:14px;
+  margin-bottom:14px;
+}
+h1{margin:0; font-size:40px; line-height:1.05}
+.role{margin:8px 0 0; color:var(--muted); line-height:1.4}
+
+.hero-actions{display:flex; gap:10px; flex-wrap:wrap}
+
+.profile h2{
+  margin:0 0 8px;
+  font-size:16px;
+  letter-spacing:.02em;
+}
+.profile p{margin: 10px;; color:var(--muted); line-height:1.65}
+
+.section{padding:16px 16px 18px}
+.section-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom:10px;
+}
+.section-head h2{margin:0; font-size:18px}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+
+.job{
+  margin-top:14px;
+  padding:14px 14px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+}
+.job-top{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.job h3{margin:0; font-size:15px}
+.meta{color:var(--muted); font-size:13px; margin-top:6px}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+}
+@media (max-width: 980px){
+  .grid{grid-template-columns:1fr}
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:11px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  transition: transform .12s ease, opacity .12s ease;
+}
+.btn:hover{transform: translateY(-1px)}
+.btn.primary{
+  border:none;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color:#071019;
+}
+
+.contact-row{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+@media (max-width: 980px){
+  .contact-row{grid-template-columns:1fr}
+}
+.contact-card{
+  padding:12px 12px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+}
+.contact-k{color:var(--muted); font-size:12px}
+.contact-v{margin-top:6px; font-weight:700; font-size:14px}
+
+.contact-actions{margin-top:14px}
+
+.footer{
+  margin-top:6px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  padding:14px 0 0;
+}
+/* ===== Hero header with avatar on the right ===== */
+
+.hero-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-avatar{
+  flex-shrink:0;
+}
+
+/* Slightly larger avatar in header */
+.avatar-hero{
+  width:72px;
+  height:72px;
+  min-width:72px;
+  min-height:72px;
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 680px){
+  .hero-header{
+    flex-direction:column-reverse;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .avatar-hero{
+    width:64px;
+    height:64px;
+    min-width:64px;
+    min-height:64px;
+  }
+}
+/* ===== Profile section navigation buttons ===== */
+
+.profile-nav{
+  margin-top:0px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom: 20px;
+}
+
+.nav-btn{
+  padding:10px 14px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+
+  color:var(--text);
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--line);
+
+  transition:
+    transform .15s ease,
+    background .15s ease,
+    box-shadow .15s ease;
+}
+
+.nav-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+
+/* ===== Kundenlogos: Marquee / Moving Logos ===== */
+
+.logo-marquee{
+  margin-top:14px;
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  padding: 14px 0;
+}
+
+/* sanfte Kanten-Fades links/rechts */
+.logo-marquee::before,
+.logo-marquee::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width:60px;
+  pointer-events:none;
+  z-index:2;
+}
+.logo-marquee::before{
+  left:0;
+  background: linear-gradient(90deg, rgba(11,15,26,1), rgba(11,15,26,0));
+}
+.logo-marquee::after{
+  right:0;
+  background: linear-gradient(270deg, rgba(11,15,26,1), rgba(11,15,26,0));
+}
+
+.logo-track{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  width:max-content;
+  will-change: transform;
+  animation: marquee 26s linear infinite;
+  padding: 0 18px;
+}
+
+/* Hover = Pause (sehr angenehm für Recruiter) */
+.logo-marquee:hover .logo-track{
+  animation-play-state: paused;
+}
+
+.logo{
+  height: 48px;
+  width:auto;
+  opacity:.85;
+  filter: grayscale(100%);
+  transition: opacity .15s ease, filter .15s ease, transform .15s ease;
+}
+
+/* Beim Hover auf ein Logo: Farbe + leichter “pop” */
+.logo:hover{
+  opacity:1;
+  filter: grayscale(0%);
+  transform: translateY(-1px);
+}
+
+@keyframes marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* weil wir Set 1 + Set 2 duplizieren */
+}
+
+/* Respektiere Systemeinstellung: reduzierte Bewegung */
+@media (prefers-reduced-motion: reduce){
+  .logo-track{ animation: none; }
+}
+
+/* ===== Job entries with company logo ===== */
+
+.job-with-logo .job-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.job-text{
+  flex:1;
+}
+
+.job-logo{
+  flex-shrink:0;
+}
+
+.job-logo img{
+  height:28px;          /* ← HIER steuerst du die Logo-Größe */
+  width:auto;
+  opacity:.85;
+  filter: grayscale(100%);
+}
+
+/* leichtes Aufwerten beim Hover */
+.job-with-logo:hover .job-logo img{
+  opacity:1;
+  filter: grayscale(0%);
+}
+
+/* Mobile: Logo unter Titel */
+@media (max-width: 680px){
+  .job-with-logo .job-header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .job-logo img{
+    height:26px;
+  }
+}
+
+.nav-btn.contact{
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border:none;
+  color:#071019;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* ===== Section break between Experience and Skills ===== */
+
+.section-break{
+  margin-top: 22px;
+  padding: 14px 4px 6px;
+  border-top: 1px solid var(--line);
+}
+
+.section-break h2{
+  margin: 10px 0 4px;
+  font-size: 20px;
+}
+
+.section-break p{
+  margin: 8px;
+}
+#experience{
+  padding-bottom: 22px;
+}
+#experience::after{
+  content:"";
+  display:block;
+  margin-top: 18px;
+  height:1px;
+  background: var(--line);
+}
+#skills .section{
+  background: rgba(255,255,255,.03);
+  box-shadow: none;
+}
+#skills .section-head{
+  border-bottom: none;
+  padding-bottom: 0;
+}
