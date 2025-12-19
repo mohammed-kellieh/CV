@@ -280,6 +280,14 @@ h1{margin:0; font-size:40px; line-height:1.05}
   min-width:72px;
   min-height:72px;
 }
+.hero-inner{
+  max-width: 960px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap:24px;
+  align-items:center;
+}
 
 /* Mobile: stack nicely */
 @media (max-width: 680px){
