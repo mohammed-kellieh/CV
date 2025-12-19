@@ -486,3 +486,13 @@ html{
   border-bottom: none;
   padding-bottom: 0;
 }
+
+.btn.linkedin{
+  background: #0a66c2;   /* LinkedIn Blau */
+  border: none;
+  color: white;
+}
+
+.btn.linkedin:hover{
+  opacity: .9;
+}
