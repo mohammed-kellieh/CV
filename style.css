@@ -10,12 +10,12 @@
   --accent2:#23d5ab;
   --max: 1100px;
 }
-
+@media (min-width: 1200px){
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin: 0;
-  padding: 0 20px;
+  padding: 0 32px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color:var(--text);
   background:
