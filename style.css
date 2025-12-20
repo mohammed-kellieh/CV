@@ -165,7 +165,7 @@ a:hover{opacity:.9}
 h1{margin:0; font-size:40px; line-height:1.05}
 .role{margin:8px 0 0; color:var(--muted); line-height:1.4}
 
-.hero-actions{margin-top: 20px;display:flex; gap:10px; flex-wrap:wrap}
+.hero-actions{margin-top: 20px;margin-left: 20px;display:flex; gap:10px; flex-wrap:wrap}
 
 .profile h2{
   margin:0 0 8px;
