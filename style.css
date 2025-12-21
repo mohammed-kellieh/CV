@@ -552,3 +552,13 @@ html{
   }
 
 }
+.btn.print{
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.btn.print:hover{
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+}
