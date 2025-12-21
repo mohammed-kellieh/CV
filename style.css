@@ -10,8 +10,7 @@
   --accent2:#23d5ab;
   --max: 1100px;
 }
-@media (min-width: 1200px){
-*{box-sizing:border-box}
+{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin: 0;
