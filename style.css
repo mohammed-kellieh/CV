@@ -496,3 +496,59 @@ html{
 .btn.linkedin:hover{
   opacity: .9;
 }
+
+@media print {
+
+  /* Farben & Hintergrund raus */
+  body{
+    background: white !important;
+    color: #000 !important;
+    padding: 0;
+  }
+
+  /* Cards flach machen */
+  .card{
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Navigation & Buttons ausblenden */
+  .profile-nav,
+  .hero-actions,
+  .btn,
+  .logo-marquee{
+    display: none !important;
+  }
+
+  /* Avatar optional ausblenden */
+  .hero-avatar{
+    display: none;
+  }
+
+  /* Typo für Druck optimieren */
+  h1{
+    font-size: 26pt;
+  }
+
+  h2{
+    font-size: 14pt;
+    margin-top: 18px;
+  }
+
+  p, li{
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000;
+  }
+
+  /* Seitenumbrüche */
+  .job{
+    page-break-inside: avoid;
+  }
+
+  section{
+    page-break-inside: avoid;
+  }
+
+}
