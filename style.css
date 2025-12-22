@@ -593,12 +593,4 @@ html{
   transition: color .15s ease, background .15s ease;
 }
 
-.edge-nav a:hover{
-  color: var(--text);
-  background: rgba(255,255,255,.08);
-}
-@media (max-width: 1024px){
-  .edge-nav{
-    display: none;
-  }
-}
+
