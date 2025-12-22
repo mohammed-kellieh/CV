@@ -592,5 +592,80 @@ html{
 
   transition: color .15s ease, background .15s ease;
 }
+/* Platz für die fixe Sidebar schaffen */
+.page.with-sidebar{
+  margin-left: 240px;   /* muss zur Sidebar-Breite passen */
+}
+
+/* FIXED Sidebar links */
+.sidebar-nav{
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  bottom: 18px;
+
+  width: 210px;
+  padding: 18px 14px;
+
+  border-radius: 16px;
+  background: linear-gradient(180deg, #4f7cff, #3f6bf2);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+
+  z-index: 999;
+}
+
+/* Titel */
+.sidebar-title{
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.sidebar-title::after{
+  content:"";
+  display:block;
+  height:1px;
+  margin-top: 10px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Links */
+.sidebar-links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.slink{
+  display:flex;
+  align-items:center;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.18);
+
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.slink:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.35);
+}
+
+/* Mobile: Sidebar ausblenden */
+@media (max-width: 980px){
+  .sidebar-nav{ display:none; }
+  .page.with-sidebar{ margin-left: 0; }
+}
 
 
