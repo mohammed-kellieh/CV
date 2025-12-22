@@ -653,3 +653,16 @@ html{
   .sidebar-nav{ display:none; }
   .page.with-sidebar{ margin-left: 0; }
 }
+
+/* Top / Start Button */
+.slink-top{
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.45);
+}
+
+.slink-top::before{
+  content: "↑";
+  margin-right: 8px;
+  font-weight: 900;
+}
+
